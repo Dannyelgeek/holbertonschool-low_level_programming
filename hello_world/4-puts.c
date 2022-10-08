@@ -2,9 +2,8 @@
 /*
  * C program for Hello, World task 4
  */
-int main(int argc, char* argv[])
+int main(void)
 {
-	int str[] = "\"Programming is like building a multilingual puzzle";
-	puts(str)
+	puts("\"Programming is like building a multilingual puzzle");
 	return 0;
 }/*end of the exercise*/
