@@ -1,5 +1,6 @@
 #include <stdio.h>
-/*
+
+/**
  * C program for Hello, World task 4
  */
 int main(void)
