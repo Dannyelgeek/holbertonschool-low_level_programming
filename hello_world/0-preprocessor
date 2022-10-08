@@ -1,2 +1,2 @@
 #!/bin/bash
-cat $CFILE | gcc > c
+cat $(CFILE) | gcc > c
