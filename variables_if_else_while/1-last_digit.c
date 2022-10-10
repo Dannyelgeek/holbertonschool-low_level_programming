@@ -15,15 +15,15 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if (n % 10  > 5)
 	{
-		printf("%i Last digit of", n) ("%i is", n % 10) ("and is greater than 5\n");
+		printf("%i Last digit of", n) ("%i is", n % 10);
 	}
 	else if (n % 10 == 0)
 	{
-		printf("%i Last digit of", n) ("%i is", n % 10) ("and is 0\n");
+		printf("%i Last digit of", n) ("%i is", n % 10);
 	}
 	else
 	{
-		printf("%i Last digit of", n) ("%i is", n % 10) ("and is less than 6 and not 0\n");
-	}
+		printf("%i Last digit of", n) ("%i is", n % 10);
 	return (0);
+}
 }
