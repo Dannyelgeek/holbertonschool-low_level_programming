@@ -7,11 +7,14 @@
 
 int main(void)
 {
-	int ad, fp, rz;
+	int ch;
 
-	for (ad = 'a'; ad <= 'd'; fp = 'f'; fp <= 'p'; rz = 'r'; rz <= 'z' )
-	putchar(ad, fp, rz);
-
+	for (ch = 'a'; ch <= 'z'; ch++)
+    {
+		if(ch != 'e' && ch != 'q')
+		putchar(ch);
+	}
+	
 	putchar('\n');
 	return (0);
 }
