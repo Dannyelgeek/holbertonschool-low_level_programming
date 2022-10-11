@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* _islower -  prints the alphabet x10 with _putchar.
+* _islower -  prints if the character is lowercase.
 * @c: character to check.
 * Return: 0 if exited correctly, non-zero otherwise.
 */
