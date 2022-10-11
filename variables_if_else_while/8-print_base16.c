@@ -10,7 +10,7 @@ int main(void)
 	int n;
 
 	for (n = '0'; n <= '16'; n++)
-	putchar("%x\n", n);
+	putchar(n);
 
 	putchar('\n');
 	return (0);
