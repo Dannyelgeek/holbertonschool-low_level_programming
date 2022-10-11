@@ -2,7 +2,7 @@
 
 /**
 * main -  prints all single digit numbers of base 10 starting from 0 
-without printf.
+* without printf.
 * Return: 0 if exited correctly, non-zero otherwise.
 */
 
