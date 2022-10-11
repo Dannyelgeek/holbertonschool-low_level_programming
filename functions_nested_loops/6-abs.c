@@ -2,7 +2,7 @@
 
 /**
 * _abs -  prints the sign of a number.
-* @int: character to check.
+* @int n: character to check.
 * Return: 0 if exited correctly, non-zero otherwise.
 */
 
