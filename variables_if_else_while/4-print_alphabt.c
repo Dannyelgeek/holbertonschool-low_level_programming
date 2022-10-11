@@ -9,7 +9,8 @@ int main(void)
 {
 	int ch;
 
-	for (ch = 'a'; ch <= 'z'; ch++) grep -v e q
+	for (ch = 'a'; ch <= 'z'; ch++)
+    grep -v e q
 	putchar(ch);
 
 	putchar('\n');
