@@ -5,7 +5,7 @@
 * Return: 0 if exited correctly, non-zero otherwise.
 */
 
-long main(void)
+int main(void)
 {
 	long l = 0123456789
 
