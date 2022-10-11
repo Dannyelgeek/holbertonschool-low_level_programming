@@ -7,8 +7,11 @@
 
 int main(void)
 {
-	long l = 0123456789
+	int n;
 
-	printf("%li\n", l);
+	for (n = '0'; ch <= '9'; n++)
+	putchar(ch);
+
+	putchar('\n');
 	return (0);
 }
