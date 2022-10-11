@@ -8,6 +8,7 @@
 long main(void)
 {
 	long l = 0123456789
+
 	printf("%li\n", l);
 	return (0);
 }
