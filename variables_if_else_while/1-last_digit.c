@@ -15,15 +15,15 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if (n % 10  > 5)
 	{
-		printf("Lasta digit of"); ("%i\n", n);
+		printf("Lasta digit of"); puts("%i\n", n);
 	}
 	else if (n % 10 == 0)
 	{
-		printf("Lastb digit of"); ("%i\n", n);
+		printf("Lastb digit of"); puts("%i\n", n);
 	}
 	else
 	{
-		printf("Lastc digit of"); ("%i\n", n);
+		printf("Lastc digit of"); puts("%i\n", n);
 }
 return (0);
 }
