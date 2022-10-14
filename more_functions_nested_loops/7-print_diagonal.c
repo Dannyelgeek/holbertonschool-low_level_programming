@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* rint_diagonal - draws a diagonal line in the terminal.
+* print_diagonal - draws a diagonal line in the terminal.
 * @n: times to print '\'
 * Return: 0 if exited correctly, non-zero otherwise.
 */
@@ -11,7 +11,7 @@ void print_diagonal(int n)
 	int l;
 	int s;
 
-	for(l = 1; l <= n; l++)
+	for (l = 1; l <= n; l++)
 	{
 		for (s = 1; s <= l; s++)
 		{
