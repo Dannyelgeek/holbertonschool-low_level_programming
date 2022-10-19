@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
-*  *_strcat -  prints a concatenate string.
+*  *_strncat -  prints a concatenate string.
 * @src: character to check.
 * @dest: sttring to concatenate.
+* @n: array to limit.
 * Return: dest if exited correctly, non-zero otherwise.
 */
 
