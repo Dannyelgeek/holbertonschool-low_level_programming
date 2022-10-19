@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
 *  *_strcat -  prints a concatenate string.
@@ -10,10 +9,17 @@
 
 char *_strcat(char *dest, char *src)
 {
-	int con, cat, ten;
+	int con, cat = 0, ten = 0;
 
-	cat = strlen(dest);
-	ten = strlen(src);
+	while (dest[cat] != '\0')
+	{
+		cat += 1;
+	}
+
+	while (src[ten] != '\0')
+	{
+		ten += 1;
+	}
 
 	for (con = cat; con < (cat + ten); con++)
 	{
