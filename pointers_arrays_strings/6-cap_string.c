@@ -17,13 +17,13 @@ char *cap_string(char *a)
 	}
 
 	for (i = 0; i < j; i++)
-    	{
-        	for (k = 0; k <= 12; k++)
-        	{
-            		if (a[i] == b[k])
-                	if (a[i + 1] >= 97 && a[i + 1] <= 122)
-                    	a[i + 1] = a[i + 1] - 32;
-        	}
-    	}
-    	return a;
+	{
+		for (k = 0; k <= 12; k++)
+		{
+			if (a[i] == b[k])
+			if (a[i + 1] >= 97 && a[i + 1] <= 122)
+			a[i + 1] = a[i + 1] - 32;
+		}
+	}
+	return (a);
 }
