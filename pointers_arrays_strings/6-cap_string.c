@@ -16,6 +16,9 @@ char *cap_string(char *a)
 		j += 1;
 	}
 
+	if (a[0] >= 97 &&  a[0] <= 122)
+		a[0] = a[0] - 32;
+
 	for (i = 0; i < j; i++)
 	{
 		for (k = 0; k <= 12; k++)
