@@ -23,7 +23,7 @@ char *_strstr(char *haystack, char *needle)
 			do {
 				if (needle[fnd + 1] == '\0')
 					return (haystack);
-					
+
 				fnd++;
 			}
 		while (haystack[fnd] == needle[fnd]);
