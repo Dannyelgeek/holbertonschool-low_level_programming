@@ -4,7 +4,7 @@
  * *_strpbrk - searches a string for any of a set of bytes.
  * @s: string to be read.
  * @accept: string containing the characters to find.
- * Return: NULL if exited correctly.
+ * Return: '\0' if exited correctly.
  */
 
 char *_strpbrk(char *s, char *accept)
