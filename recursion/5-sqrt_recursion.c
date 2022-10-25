@@ -3,9 +3,8 @@
 /**
  * _sqrt_recursion - returns the natural
  * square root of a number.
- * root - auxiliar function.
  * @n: number to root.
- * Return: 1 if exited correctly.
+ * Return: root if exited correctly.
  */
 
 int _sqrt_recursion(int n)
@@ -17,6 +16,13 @@ int _sqrt_recursion(int n)
 	else
 		return (root(n, r1));
 }
+
+/**
+ * root - auxiliar function.
+ * @n: number to root:
+ * @r1: checker.
+ * Return: r1 if works correctly and root checker.
+*/
 
 int root(int n, int r1)
 {
