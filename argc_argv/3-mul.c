@@ -15,13 +15,15 @@ int main(int argc, char *argv[])
 	for (ind = 1; ind < argc; ind++)
 	{
 		int x = strtol(argv[ind], NULL, 10);
-		result = result * x;
 
+		result = result * x;
 	}
+
 	if (argc < 3)
 	{
 		printf("Error\n");
 	}
+
 	else
 		printf("%d\n", result);
 
