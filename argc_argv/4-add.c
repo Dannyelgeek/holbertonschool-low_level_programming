@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * main - adds two positive numbers.
@@ -10,22 +11,36 @@
 
 int main(int argc, char *argv[])
 {
-	int ind, result = 0;
+	int ind;
+	unsigned int sum, result = 0;
+	char *a;
 
-	for (ind = 1; ind < argc; ind++)
+	if (argc > 1)
 	{
-		int x = strtol(argv[ind], NULL, 10);
+		for (ind = 1; ind < argc; ind++)
+		{
+			a = argv[ind];
 
-		result = result + x;
-	}
+			for (sum = 0; sum < strlen(a); sum++)
+			{
+				if (a[sum] < 48 || a[sum] > 57)
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
 
-	/*if (argc < 3)
-	{
-		printf("Error\n");
-	}
+			result += atoi(a);
 
-	else*/
+			a++;
+		}	
 		printf("%d\n", result);
+	}
+
+	else
+	{
+		printf("0\n");
+	}
 
 	return (0);
 }
