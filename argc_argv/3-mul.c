@@ -17,7 +17,12 @@ int main(int argc, char *argv[])
 		int x = strtol(argv[ind], NULL, 10);
 		result = result * x;
 	}
-	printf("%d\n", result);
+	if (argv[ind] < argv[2])
+		printf("error\n");
+
+	else
+		printf("%d\n", result);
+
 	return (0);
 }
 
