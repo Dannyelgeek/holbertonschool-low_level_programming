@@ -31,7 +31,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (point == NULL)
 		return (NULL);
-	
+
 	for (ten = 0; s1[ten] != '\0'; ten++)
 		point[ten] = s1[ten];
 
@@ -40,4 +40,4 @@ char *str_concat(char *s1, char *s2)
 
 	return (point);
 }
-		
+
