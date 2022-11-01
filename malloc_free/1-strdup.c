@@ -24,7 +24,7 @@ char *_strdup(char *str)
 
 	if (point == NULL)
 		return (NULL);
-	
+
 	for (cop = 0; str[cop] != '\0'; cop++)
 		point[cop] = str[cop];
 
