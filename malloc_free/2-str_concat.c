@@ -26,7 +26,7 @@ char *str_concat(char *s1, char *s2)
 
 	point = malloc(sizeof(char) * con + cat + 1);
 
-	if (s1 == NULL)
+	if (point == NULL)
 		return (NULL);
 	
 	for (ten = 0; s1[ten] != '\0'; ten++)
