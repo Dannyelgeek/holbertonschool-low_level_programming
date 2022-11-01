@@ -4,7 +4,7 @@
 /**
  * _strdup - returns a pointer to a newly allocated space in memory.
  * @str: string to copy.
- * Return point if exited correctly.
+ * Return: point if exited correctly.
 */
 
 char *_strdup(char *str)
@@ -13,7 +13,7 @@ char *_strdup(char *str)
 	char *point;
 
 	if (str == NULL)
-                return (NULL);
+		return (NULL);
 
 	for (len = 0; str[len] != '\0'; len++)
 	{
@@ -23,7 +23,7 @@ char *_strdup(char *str)
 	point = malloc(sizeof(char) * len + 1);
 
 	if (point == NULL)
-                return (NULL);
+		return (NULL);
 	
 	for (cop = 0; str[cop] != '\0'; cop++)
 		point[cop] = str[cop];
