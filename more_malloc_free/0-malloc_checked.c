@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 /**
- * malloc_checked -  allocates memory using malloc.
- * @b: size of the memory. 
+ * malloc_checked - allocates memory using malloc.
+ * @b: size of the memory.
 */
 
 void *malloc_checked(unsigned int b)
@@ -15,6 +15,6 @@ void *malloc_checked(unsigned int b)
 	if (point == NULL)
 		exit(98);
 
-	return(point);
+	return (point);
 }
 
