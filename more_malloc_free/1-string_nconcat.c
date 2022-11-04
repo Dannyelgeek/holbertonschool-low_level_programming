@@ -33,7 +33,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (cat < n && s2[cat] != 0)
 	{
 		point[con] = s2[cat];
-		con ++; cat++;
+		con++; cat++;
 	}
 	point[con] = '\0';
 	return (point);
