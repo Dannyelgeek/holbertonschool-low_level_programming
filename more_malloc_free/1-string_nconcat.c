@@ -5,43 +5,37 @@
  * string_nconcat - concatenates two strings.
  * @s1: first string
  * @s2: second string
- * @n:
+ * @n: n bytes to concat
  * Return: point if exited correctly.
 */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int con = 0, cat = 0, ten = 0, nat = 0;
+	int con = 0;
+	unsigned int cat = 0;
 	char *point;
 
 	if (s1 == NULL)
 		s1 = "";
-
-	for (con = 0; s1[con] != '\0'; con++)
-	{
-	}
-
 	if (s2 == NULL)
 		s2 = "";
-
-	for (cat = 0; s2[cat] != '\0'; cat++)
-	{
-	}
-
-
-	point = malloc(sizeof(char) * con + cat + 1);
-
+	while (s1[con] != '\0')
+		con++;
+	point = malloc(sizeof(char) * (con + n + 1));
 	if (point == NULL)
 		return (NULL);
-
-	for (ten = 0; s1[ten] != '\0'; ten++)
-		point[ten] = s1[ten];
-
-	while (nat < n)
+	con = cat = 0;
+	while (s1[con] != 0)
 	{
-		point[nat + con] = s2[nat];
-		nat++;
+		point[con] = s1[con];
+		con++;
 	}
-
+	while (cat < n && s2[cat] != 0)
+	{
+		point[con] = s2[cat];
+		con ++; cat++;
+	}
+	point[con] = '\0';
 	return (point);
 }
+
