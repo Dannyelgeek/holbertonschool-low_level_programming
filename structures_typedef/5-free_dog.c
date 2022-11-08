@@ -3,6 +3,7 @@
 #include <stddef.h>
 /**
  * free_dog - free all dogs
+ * @d: dog´s data.
 */
 
 void free_dog(dog_t *d)
