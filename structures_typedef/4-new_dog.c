@@ -15,12 +15,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 		lenowner++;
 
 	lucky = malloc(sizeof(dog_t));
+	if (lucky == NULL)
+        {
+                return (NULL);
+        }
 	lucky->name = malloc(lenname + 1);
 	lucky->owner = malloc(lenowner + 1);
-	if (lucky == NULL)
-	{
-		return (NULL);
-	}
 	if (lucky->name == NULL || lucky->owner ==NULL)
 	{
 		free(lucky);
