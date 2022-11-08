@@ -17,12 +17,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 	lucky = malloc(sizeof(dog_t));
 	lucky->name = malloc(lenname + 1);
 	lucky->owner = malloc(lenowner + 1);
-	if (lucky->name == NULL || lucky->owner ==NULL)
+	if (lucky == NULL)
 	{
 		free(lucky);
+		return (NULL);
+	}
+	if (lucky->name == NULL || lucky->owner ==NULL)
+	{
 		free(lucky->name);
 		free(lucky->owner);
-		return (NULL);
 	}
 	for (copname = 0; copname <= lenname; copname++)
 		lucky->name[copname] = name[copname];
