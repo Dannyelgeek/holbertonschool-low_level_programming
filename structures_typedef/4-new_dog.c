@@ -13,6 +13,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	lucky->name = name;
 	lucky->age = age;
-	lucky->owner = nanamreturn (lucky);
+	lucky->owner = name;
+	return (lucky);
 }
 
