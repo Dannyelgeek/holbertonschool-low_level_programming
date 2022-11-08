@@ -2,6 +2,11 @@
 #include <stdlib.h>
 
 /**
+ * new_dog - new dog´s data
+ * @name: new dog´s name.
+ * @age: new dog´s age.
+ * @owner: new dog´s owner.
+ * Return: lucky if exited correctly.
 */
 
 dog_t *new_dog(char *name, float age, char *owner)
@@ -16,9 +21,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	lucky = malloc(sizeof(dog_t));
 	if (lucky == NULL)
-        {
-                return (NULL);
-        }
+	{
+		return (NULL);
+	}
 	lucky->name = malloc(lenname + 1);
 	lucky->owner = malloc(lenowner + 1);
 	if (lucky->name == NULL || lucky->owner ==NULL)
