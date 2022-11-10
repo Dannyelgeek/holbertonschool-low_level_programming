@@ -8,7 +8,7 @@ void print_char(va_list arg)
 {
 	char character;
 	character = va_arg(arg,int);
-	print("%c", character);
+	printf("%c", character);
 }
 /**
 */
@@ -28,7 +28,7 @@ void print_float(va_list arg)
 }
 /**
 */
-void print_char_point(va_list arg);
+void print_char_point(va_list arg)
 {
 	char *str;
 	str = va_arg(arg, char*);
@@ -51,7 +51,7 @@ void print_all(const char * const format, ...)
 		{"c", print_char},
 		{"i", print_int},
 		{"f", print_float},
-		{"s", print_string}
+		{"s", print_char_point}
 	};
 	va_start(all_args, format);
 
