@@ -14,12 +14,12 @@ int sum_them_all(const unsigned int n, ...)
 
 	va_start(add_num, n);
 
-	while(ind < n)
+	while (ind < n)
 	{
 		sum += va_arg(add_num, int);
 		ind++;
 	}
-	
+
 	va_end(add_num);
 	return (sum);
 }
