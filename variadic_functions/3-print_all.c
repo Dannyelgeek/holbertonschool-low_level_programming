@@ -57,6 +57,7 @@ void print_all(const char * const format, ...)
 
 	while (format && (*(format + ind)))
 	{
+		j = 0;
 		while (j < 4 && (*(format + ind) != *(funcs[j].sym)))
 			j++;
 		if (j < 4)
