@@ -4,7 +4,7 @@
 /**
  * print_name - prints a nema.
  * @name: name to print.
- * @f: pointer´s function that prints a mane.
+ * @f: function´s pointer that prints a mane.
 */
 
 void print_name(char *name, void (*f)(char *))
