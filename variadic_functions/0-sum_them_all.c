@@ -20,7 +20,7 @@ int sum_them_all(const unsigned int n, ...)
 		ind++;
 	}
 	
-	va_end(add_sum);
+	va_end(add_num);
 	return (sum);
 }
 
