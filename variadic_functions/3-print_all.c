@@ -3,6 +3,8 @@
 #include <stdarg.h>
 
 /**
+ * print_char - print a character.
+ * @arg: character to print.
 */
 void print_char(va_list arg)
 {
@@ -12,6 +14,8 @@ void print_char(va_list arg)
 	printf("%c", character);
 }
 /**
+ * print_int - print a integer.
+ * @arg: integer to print.
 */
 void print_int(va_list arg)
 {
@@ -21,6 +25,8 @@ void print_int(va_list arg)
 	printf("%d", num);
 }
 /**
+ * print_float - print a decimal.
+ * @arg: decimal tu print.
 */
 void print_float(va_list arg)
 {
@@ -30,6 +36,8 @@ void print_float(va_list arg)
 	printf("%f", dec);
 }
 /**
+ * print_char_point - print a string.
+ * @arg: string to print.
 */
 void print_char_point(va_list arg)
 {
@@ -44,6 +52,8 @@ void print_char_point(va_list arg)
 	printf("%s", str);
 }
 /**
+ * print_all - print all arguments.
+ * @format: list of types of arguments passed to the function.
 */
 void print_all(const char * const format, ...)
 {
