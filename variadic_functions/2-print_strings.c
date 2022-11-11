@@ -12,7 +12,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list strings_to_print;
 	char *str;
-	unsigned ind = 0;
+	unsigned int ind = 0;
 
 	va_start(strings_to_print, n);
 
@@ -23,7 +23,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			printf("(nil)");
 		else
 			printf("%s", str);
-		if (ind != (n -1) && separator != NULL)
+		if (ind != (n - 1) && separator != NULL)
 			printf("%s", separator);
 		ind++;
 	}
