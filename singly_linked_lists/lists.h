@@ -5,6 +5,9 @@
 
 /**
  * struct list_s - main node of the list.
+ * @str: pointer to a string of the list.
+ * @len: len of the list.
+ * @next: pointer to next node of the list.
 */
 typedef struct list_s
 {
