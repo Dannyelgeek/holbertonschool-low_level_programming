@@ -4,7 +4,7 @@
  * add_nodeint - adds a new node at the beginning of a list.
  * @head: pionter of the header of th lists
  * @n: num on the lists
- * Return:
+ * Return: new_nod if exited correctly
 */
 
 listint_t *add_nodeint(listint_t **head, const int n)
@@ -12,7 +12,7 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	listint_t *new_nod;
 
 	new_nod = (listint_t *)malloc(sizeof(listint_t));
-	if(!new_nod)
+	if (!new_nod)
 		return (NULL);
 
 	new_nod->n = n;
