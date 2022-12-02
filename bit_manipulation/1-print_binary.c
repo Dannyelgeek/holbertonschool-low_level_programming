@@ -2,7 +2,7 @@
 
 /**
  * print_binary - prints the binary representation of a number.
- * @n; num to print
+ * @n: num to print.
 */
 
 void print_binary(unsigned long int n)
