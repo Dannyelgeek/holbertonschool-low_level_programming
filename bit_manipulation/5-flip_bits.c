@@ -6,7 +6,6 @@
  * @n: number base
  * @m: number to transform
  * Return: the number of bits needed.
- * 
 */
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
