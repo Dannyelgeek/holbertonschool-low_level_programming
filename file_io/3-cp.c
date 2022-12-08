@@ -10,7 +10,7 @@ int closerr(int error, char *s, int file_d);
 
 int main(int argc, char *argv[])
 {
-	int file_a, file_b, file_c, re, wr;
+	int file_a, file_b, re, wr;
 	char buff[1024];
 
 	if (argc != 3)
