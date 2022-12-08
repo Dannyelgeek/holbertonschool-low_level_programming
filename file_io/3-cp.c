@@ -55,6 +55,7 @@ int closerr(int error, char *s, int file_d)
 			exit(error);
 		case 98:
 			dprintf(2, "Error: Can't read from file %s\n", s);
+			dprintf(1, "Error: Can't read from file %s\n", s);
 			exit(error);
 		case 99:
 			dprintf(2, "Error: Can't write to %s\n", s);
