@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	file_a = open(argv[1], O_RDONLY);
 	if (file_a == -1)
 		closerr(98, argv[1], 0);
-	
+
 	while ((re = read(file_a, buff, 1024)) != 0)
 	{
 		if (re == -1)
