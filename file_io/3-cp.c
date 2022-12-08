@@ -1,7 +1,5 @@
 #include "main.h"
 
-int closerr(int error, char *s, int file_d);
-
 /**
  * main - copies the content of a file to another file.
  * @argc: number of arguments
