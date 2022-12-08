@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 		dprintf(2, "Error: Can´t read from file %s\n", argv[1]);
 		exit(98);
 	}
-	file_to = open(2, argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
+	file_to = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
 	if (file_to == -1)
 	{
 		dprintf(2, "Error: Can´t write to %s\n", argv[2]);
@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 		file_from_r = read(file_from, buff, 1024);
 		if (file_from_r == -1)
 		{
-			dprntf(2, "Error: Can´t read from file %s\n", argv[1]);
+			dprintf(2, "Error: Can´t read from file %s\n", argv[1]);
 			closerr(file_from);
 			closerr(file_to);
 			exit(98);
@@ -67,6 +67,6 @@ void closerr(int arg_files)
 	if (close_err == -1)
 	{
 		dprintf(2, "Error: Can´t close fd %s\n", arg_files);
-		exit (100);
+		exit(100);
 	}
 }
