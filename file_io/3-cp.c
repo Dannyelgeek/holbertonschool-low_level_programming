@@ -66,7 +66,7 @@ void closerr(int arg_files)
 	close_err = close(arg_files);
 	if (close_err == -1)
 	{
-		dprintf(2, "Error: Can´t close fd %s\n", arg_files);
+		dprintf(2, "Error: Can´t close fd %d\n", arg_files);
 		exit(100);
 	}
 }
