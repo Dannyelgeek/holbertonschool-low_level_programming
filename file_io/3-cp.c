@@ -1,7 +1,6 @@
 #include "main.h"
 
-void closerr(int arg_files);
-
+int closerr(int error, char *s, int file_d);
 /**
  * main - copies the content of a file to another file.
  * @argc: number of arguments
@@ -11,62 +10,59 @@ void closerr(int arg_files);
 
 int main(int argc, char *argv[])
 {
-	int file_from, file_to, file_from_r, err;
+	int file_a, file_b, file_c, re, wr;
 	char buff[1024];
 
 	if (argc != 3)
+		closerr(97, NULL, 0);
+
+	file_b = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
+	if (file_b == -1)
+		closerr(99, argv[2], 0);
+
+	file_a = open(argv[1], O_RDONLY);
+	if (file_a == -1)
+		closerr(98, argv[1], 0);
+	
+	while ((re = read(file_a, buff, 1024)) != 0)
 	{
-		dprintf(2, "Usage: cp file_from file_to\n");
-		exit(97);
+		if (re == -1)
+			closerr(98, argv[1], 0);
+
+		wr = write(file_b, buff, re);
+		if (wr == -1)
+			closerr(99, argv[2], 0);
 	}
-	file_from = open(argv[1], O_RDONLY);
-	if (file_from == -1)
-	{
-		dprintf(2, "Error: Can´t read from file %s\n", argv[1]);
-		exit(98);
-	}
-	file_to = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
-	if (file_to == -1)
-	{
-		dprintf(2, "Error: Can´t write to %s\n", argv[2]);
-		exit(99);
-	}
-	while (file_from_r >= 1024)
-	{
-		file_from_r = read(file_from, buff, 1024);
-		if (file_from_r == -1)
-		{
-			dprintf(2, "Error: Can´t read from file %s\n", argv[1]);
-			closerr(file_from);
-			closerr(file_to);
-			exit(98);
-		}
-		err = write(file_to, buff, file_from_r);
-		if (err == -1)
-		{
-			dprintf(2, "Error: Can´t write to %s\n", argv[2]);
-			exit(99);
-		}
-	}
-	closerr(file_from);
-	closerr(file_to);
+	close(file_b) == -1 ? (closerr(100, NULL, file_b)) : close(file_b);
+	close(file_a) == -1 ? (closerr(100, NULL, file_a)) : close(file_a);
 	return (0);
 }
 
 /**
  * closerr - close the file with error.
- * @arg_files: argv 1 or 2.
+ * @error: exit value.
+ * @s: name of the files.
+ * @file_d: file descriptor
  * Return: 0 if exited correctly.
 */
 
-void closerr(int arg_files)
+int closerr(int error, char *s, int file_d)
 {
-	int close_err;
-
-	close_err = close(arg_files);
-	if (close_err == -1)
+	switch (error)
 	{
-		dprintf(2, "Error: Can´t close fd %d\n", arg_files);
-		exit(100);
+		case 97:
+			dprintf(2, "Usage: cp file_from file_to\n");
+			exit(error);
+		case 98:
+			dprintf(2, "Error: Can´t read from file %s\n", s);
+			exit(error);
+		case 99:
+			dprintf(2, "Error: Can´t write to %s\n", s);
+			exit(error);
+		case 100:
+			dprintf(2, "Error: can´t close fd %d\n", file_d);
+			exit(error);
+		default:
+			return (0);
 	}
 }
