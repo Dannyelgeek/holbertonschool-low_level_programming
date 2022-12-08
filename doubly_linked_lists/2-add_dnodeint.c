@@ -11,7 +11,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *new_nod;
 
-	if(!head)
+	if (!head)
 		return (NULL);
 	new_nod = (dlistint_t *)malloc(sizeof(dlistint_t));
 	if (!new_nod)
