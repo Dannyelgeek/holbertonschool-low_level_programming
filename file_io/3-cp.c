@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 		if (err == -1)
 		{
 			dprintf(2, "Error: Can´t write to %s\n", argv[2]);
-			exit (99);
+			exit(99);
 		}
 	}
 	closerr(file_from);
