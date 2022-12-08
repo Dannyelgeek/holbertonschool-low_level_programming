@@ -11,21 +11,19 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *new_nod, *tmp;
 
+	if (!head)
+		return (NULL);
 	new_nod = (dlistint_t *)malloc(sizeof(dlistint_t));
 	if (!new_nod)
 		return (NULL);
+
 	new_nod->n = n;
 	new_nod->prev = NULL;
-	new_nod->next = NULL;
-	if (!head)
-	{
-		new_nod->next = NULL;
-		*head = new_nod;
-		return (*head);
-	}
 	tmp = *head;
-	new_nod->next = tmp;
-	tmp->prev = new_nod;
 	*head = new_nod;
+	new_nod->next = tmp;
+
+	if (tmp)
+		tmp->prev = *head;
 	return (new_nod);
 }
