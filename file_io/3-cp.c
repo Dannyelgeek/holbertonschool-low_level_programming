@@ -60,7 +60,7 @@ int closerr(int error, char *s, int file_d)
 			dprintf(2, "Error: Can't write to %s\n", s);
 			exit(error);
 		case 100:
-			dprintf(2, "Error: can't close fd %d\n", file_d);
+			dprintf(2, "Error: Can't close fd %d\n", file_d);
 			exit(error);
 		default:
 			return (0);
