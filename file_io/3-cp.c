@@ -23,13 +23,13 @@ int main(int argc, char *argv[])
 	file_a = open(argv[1], O_RDONLY);
 	if (file_a == -1)
 	{
-		dprintf(2, "Error: Can´t read from file %s\n", argv[1]);
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	file_b = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC | O_APPEND, 0664);
 	if (file_b == -1)
 	{
-		dprintf(2, "Error: Can´t write from file %s\n", argv[2]);
+		dprintf(2, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 	while (size == 1024)
@@ -37,24 +37,24 @@ int main(int argc, char *argv[])
 		size = read(file_a, buff, 1024);
 		if (size == -1)
 		{
-			dprintf(2, "Error: Can´t read from file %s\n", argv[1]);
+			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
 		wr = write(file_b, buff, size);
 		if (wr == -1)
 		{
-			dprintf(2, "Error: Can´t write to %s\n", argv[2]);
+			dprintf(2, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
 	}
 	if (close(file_a) == -1)
 	{
-		dprintf(2, "Error: Can´t close fd %d\n", file_a);
+		dprintf(2, "Error: Can't close fd %d\n", file_a);
 		exit(100);
 	}
 	if (close(file_b) == -1)
 	{
-		dprintf(2, "Error: Can´t close fd %d\n", file_b);
+		dprintf(2, "Error: Can't close fd %d\n", file_b);
 		exit(100);
 	}
 	return (0);
