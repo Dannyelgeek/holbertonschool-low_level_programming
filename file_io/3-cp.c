@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 	}
 	if (close(file_a) == -1)
 	{
-		dprinf(2, "Error: Can´t close fd %d\n", file_a);
+		dprintf(2, "Error: Can´t close fd %d\n", file_a);
 		exit(100);
 	}
 	if (close(file_b) == -1)
