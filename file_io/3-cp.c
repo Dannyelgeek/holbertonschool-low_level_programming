@@ -41,6 +41,12 @@ int main(int argc, char *argv[])
 			closerr(file_to);
 			exit(98);
 		}
+		err = Write(file_to, buff, file_from_r);
+		if (err == -1)
+		{
+			dprintf(2, "Error: Can´t write to %s\n", argv[2]);
+			exit (99);
+		}
 	}
 	closerr(file_from);
 	closerr(file_to);
