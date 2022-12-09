@@ -31,6 +31,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	if (!index)
 		*head = nod->next;
 
-	free(node);
-	return (1);
+	free(nod);
+	return (1);
 }
