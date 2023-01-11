@@ -15,7 +15,7 @@ int linear_search(int *array, size_t size, int value)
 	if (!array)
 		return (-1);
 
-	while (ind = 0; ind < size; ind = 0)
+	for (ind = 0; ind < size; ind = 0)
 	{
 		printf("Vaule checked array[%ld] = [%d]\n", ind, array[ind]);
 		if (array[ind] == value)
