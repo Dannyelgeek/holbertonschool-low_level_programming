@@ -10,22 +10,16 @@
 
 int linear_search(int *array, size_t size, int value)
 {
-	unsigned int ind;
-	int flag;
+	size_t ind = 0;
 
 	if (!array)
 		return (-1);
 
 	for (ind = 0; ind < size; ind++)
 	{
-		printf("Vaule checked array[%u] = [%d]\n", ind, array[ind]);
+		printf("Vaule checked array[%lu] = [%d]\n", ind, array[ind]);
 		if (array[ind] == value)
-		{
-			flag = 1;
 			return (ind);
-		}
 	}
-	if (flag != 1)
-		return (-1);
-	return (ind);
+	return (-1);
 }
